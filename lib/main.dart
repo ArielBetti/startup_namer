@@ -12,14 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Statup name generator',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Statup name generator'),
-        ),
-        body: const Center(
-          child: RandomWords(),
+      home: const RandomWords(),
+      theme: ThemeData(          // Add the 5 lines from here...
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.white,
         ),
       ),
-    );
+      debugShowCheckedModeBanner: false,
+      );
   }
 }
